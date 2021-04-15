@@ -1,5 +1,5 @@
-FROM fusuf/whatsasena:latestt
-RUN git clone https://github.com/Phoenixx1202/asenabot bot
+FROM ethie/asenabot
+RUN git clone https://github.com/erickythierry/asenabot bot
 WORKDIR /bot
 RUN npm install supervisor -g
 RUN npm i
