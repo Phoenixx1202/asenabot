@@ -3,7 +3,7 @@
     "description": "WhatApp project ",
     "logo": "",
     "keywords": ["whatsapp", "userbot", "bot", "api", "ai"],
-    "repository": "https://github.com/erickythierry/asenabot",
+    "repository": "https://github.com/Phoenixx1202/asenabot",
     "stack": "container",
     "env": {
         "ASENA_SESSION": {
@@ -17,7 +17,7 @@
         "LANGUAGE": {
             "description": "linguagem do bot: coloque apenas as duas letras do idioma. (ex: PT = portugues, EN = ingles, ES = espanhol)",
             "required": true,
-            "value": "PT"
+            "value": "PT-BR"
         },
         "HANDLERS": {
             "description": "simbolo de identificação de comando.",
