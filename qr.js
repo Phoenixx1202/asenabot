@@ -14,21 +14,21 @@ const fs = require('fs');
 async function whatsAsena () {
     const conn = new WAConnection();
     const Session = new StringSession();  
-    conn.logger.level = 'warn';
+    conn.logger.level = 'aviso';
     conn.regenerateQRIntervalMs = 50000;
     
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
-${chalk.white.italic('AsenaString Kodu Alıcı')}
+${chalk.white.italic('Receptor de código Asena')}
 
-${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
+${chalk.blue.italic('ℹ️  Conectando ao Whatsapp ... Aguarde.')}`);
     });
     
 
     conn.on('open', () => {
         var st = Session.createStringSession(conn.base64EncodedAuthInfo());
         console.log(
-            chalk.green.bold('Asena String Kodunuz: '), Session.createStringSession(conn.base64EncodedAuthInfo())
+            chalk.green.bold('Seu código Asena: '), Session.createStringSession(conn.base64EncodedAuthInfo())
         );
         
         if (!fs.existsSync('config.env')) {
@@ -36,7 +36,7 @@ ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
         }
 
         console.log(
-            chalk.blue.bold('Locale kuruyorsanız node bot.js ile botu başlatabilirsiniz.')
+            chalk.blue.bold('Se você estiver instalando localmente, pode iniciar o bot com node bot.js.')
         );
         process.exit(0);
     });
